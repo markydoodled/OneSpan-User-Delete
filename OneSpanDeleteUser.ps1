@@ -13,7 +13,7 @@ function DeleteUser {
 
     # Make the API call to delete the user
     try {
-        $response = Invoke-RestMethod -Uri $apiUrl -Method Delete -Headers @{ "Authorisation" = "Bearer $apiKey" }
+        $response = Invoke-RestMethod -Uri $apiUrl -Method Delete -Headers @{ "Authorization" = "Bearer $apiKey" }
 
         # Check the response and display a message
         if ($response -eq $null) {
